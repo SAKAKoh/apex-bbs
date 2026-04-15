@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -23,7 +21,7 @@
          <option value="rank.html">ランクマッチ</option>
          <option value="arena.html">アリーナ</option>
          <option value="arenarank.html">アリーナランク</option>
-         <option value="controle.html">コントローラー</option>
+         <option value="controle.html">フラッシュポイント</option>
        </select>
        </div>
       -->
@@ -32,18 +30,18 @@
       <legend>作成する</legend>
      <fieldset>
       <legend>Apexのネーム</legend>
-      <input type="text" name="name" id="name"><br>
+      <input type="text" name="name" ><br>
      </fieldset> 
 
      <fieldset>
         <legend>ゲームモードを選択</legend>
-      <select name="select" id="select">
-         <option value="訓練所">訓練所</a></option>
-         <option value="カジュアル">カジュアル</option>
-         <option value="ランクマッチ">ランクマッチ</option>
-         <option value="アリーナ">アリーナ</option>
-         <option value="アリーナランク">アリーナランク</option>
-         <option value="コントロール">コントロール</option>
+      <select name="mode">
+         <option hidden>選択してください</option>
+         <option value="1">訓練所</option>
+         <option value="2">カジュアル</option>
+         <option value="3">ランクマッチ</option>
+         <option value="4">アリーナ</option>
+         <option value="5">アリーナランク</option>
        </select>
 
 
@@ -51,189 +49,104 @@
 
      <fieldset>
         <legend>クロスプレイ</legend>
-        <input type="radio" name="crossplay" value="できる" id="できる"><label for="できる">できる</label><br>
-        <input type="radio" name="crossplay" value="できない" id="できない"><label for="できない">できない</label><br>
+        <input type="radio" name="play" value="1" >できる<br>
+        <input type="radio" name="play" value="2" >できない<br>
 
         <legend>機種</legend>
-        <input type="radio" name="model" value="PC" id="PC"><label for="PC">PC</label><br>
-        <input type="radio" name="model" value="PS" id="PS"><label for="PS">PS/Switch/xbox</label><br>
+        <input type="radio" name="model" value="1" >PC<br>
+        <input type="radio" name="model" value="2" >PS/Switch/xbox<br>
      </fieldset>
 
      <fieldset>
       <legend>ランク帯</legend>
-       
-         </optgroup>
-   <select name="rank" id="rank">
+
+   <select name="rank" >
+      <option hidden>選択してください</option>
          <optgroup label="ブロンズ">
-            <option value="ブロンズⅤ">ブロンズⅤ</option>
-            <option value="ブロンズⅣ">ブロンズⅣ/option>
-            <option value="ブロンズⅢ">ブロンズⅢ<</option>
-            <option value="ブロンズⅡ">ブロンズⅡ</option>
-            <option value="ブロンズⅠ">ブロンズⅠ</option>   
+            <option value="1">ブロンズⅣ</option>
+            <option value="2">ブロンズⅢ</option>
+            <option value="3">ブロンズⅡ</option>
+            <option value="4">ブロンズⅠ</option>   
          </optgroup>
 
          <optgroup label="シルバー">
-            <option value="シルバーⅤ">シルバーⅤ</option>
-            <option value="シルバーⅣ">シルバーⅣ</option>
-            <option value="シルバーⅢ">シルバーⅢ</option>
-            <option value="シルバーⅡ">シルバーⅡ</option>
-            <option value="シルバーⅠ">シルバーⅠ</option>   
+            <option value="5">シルバーⅣ</option>
+            <option value="6">シルバーⅢ</option>
+            <option value="7">シルバーⅡ</option>
+            <option value="8">シルバーⅠ</option>   
          </optgroup>
 
          <optgroup label="ゴールド">
-            <option value=">ゴールドⅤ">ゴールドⅤ</option>
-            <option value="ゴールドⅣ">ゴールドⅣ</option>
-            <option value="ゴールドⅢ">ゴールドⅢ</option>
-            <option value="ゴールドⅡ">ゴールドⅡ</option>
-            <option value="ゴールドⅠ">ゴールドⅠ</option>   
+            <option value="9">ゴールドⅣ</option>
+            <option value="10">ゴールドⅢ</option>
+            <option value="11">ゴールドⅡ</option>
+            <option value="12">ゴールドⅠ</option>   
          </optgroup>
 
          <optgroup label="プラチナ">
-            <option value="プラチナⅤ">プラチナⅤ</option>
-            <option value="プラチナⅣ">プラチナⅣ</option>
-            <option value="プラチナⅢ">プラチナⅢ</option>
-            <option value="プラチナⅡ">プラチナⅡ</option>
-            <option value="プラチナⅠ">プラチナⅠ</option>   
+            <option value="13">プラチナⅣ</option>
+            <option value="14">プラチナⅢ</option>
+            <option value="15">プラチナⅡ</option>
+            <option value="16">プラチナⅠ</option>   
          </optgroup>
 
          <optgroup label="ダイアモンド">
-            <option value="ダイアモンドⅤ">ダイアモンドⅤ</option>
-            <option value="ダイアモンドⅣ">ダイアモンドⅣ</option>
-            <option value="ダイアモンドⅢ">ダイアモンドⅢ</option>
-            <option value="ダイアモンドⅡ">ダイアモンドⅡ</option>
-            <option value="ダイアモンドⅠ">ダイアモンドⅠ</option>   
+            <option value="17">ダイアⅣ</option>
+            <option value="18">ダイアⅢ</option>
+            <option value="19">ダイアⅡ</option>
+            <option value="20">ダイアⅠ</option>   
          </optgroup>
 
          <optgroup label="マスター">
-            <option value="マスターⅤ">マスターⅤ</option>
-            <option value="マスターⅣ">マスターⅣ</option>
-            <option value="マスターⅢ">マスターⅢ</option>
-            <option value="マスターⅡ">マスターⅡ</option>
-            <option value="マスターⅠ">マスターⅠ</option>   
+            <option value="21">マスター</option>
          </optgroup>
       
     
          <optgroup label="Apexプレデター">
-            <option value="ApexプレデターⅤ">ApexプレデターⅤ</option>
-            <option value="ApexプレデターⅣ">ApexプレデターⅣ</option>
-            <option value="ApexプレデターⅢ">ApexプレデターⅢ</option>
-            <option value="ApexプレデターⅡ">ApexプレデターⅡ</option>
-            <option value="ApexプレデターⅠ">ApexプレデターⅠ</option>   
+            <option value="22">Apexプレデタ-</option>  
        </select>
      </fieldset>
 
      <fieldset>
         <legend>使用するレジェンド</legend>
-        <select name="party0" id="party0">
-         <option value="なんでも">なんでも</option>
-         <option value="ブラッドハウンド">ブラッドハウンド</option>
-         <option value="ジブラルタル">ジブラルタル</option>
-         <option value="ライフライン">ライフライン</option>
-         <option value="パスファインダー">パスファインダー</option>
-         <option value="レイス">レイス</option>   
-         <option value="バンガロール">バンガロール</option>
-         <option value="コースティック">コースティック</option>
-         <option value="ミラージュ">ミラージュ</option>
-         <option value="オクタン">オクタン</option>
-         <option value="ワットソン">ワットソン</option>
-         <option value="クリプト">クリプト</option>
-         <option value="レヴナント">レヴナント</option>
-         <option value="ローバ">ローバ</option>
-         <option value="ランパート">ランパート</option>
-         <option value="ホライゾン">ホライゾン</option>
-         <option value="ヒューズ">ヒューズ</option>
-         <option value="ヴァルキリー">ヴァルキリー</option>
-         <option value="シア">シア</option>
-         <option value="アッシュ">アッシュ</option>
-         <option value="マッドマギー">マッドマギー</option>
+        <select name="character">
+         <option hidden>選択してください</option>
+         <option value="1">なんでも</option>
+         <option value="2">ブラッドハウンド</option>
+         <option value="3">ジブラルタル</option>
+         <option value="4">ライフライン</option>
+         <option value="5">パスファインダー</option>
+         <option value="6">レイス</option>   
+         <option value="7">バンガロール</option>
+         <option value="8">コースティック</option>
+         <option value="9">ミラージュ</option>
+         <option value="10">オクタン</option>
+         <option value="11">ワットソン</option>
+         <option value="12">クリプト</option>
+         <option value="13">レヴナント</option>
+         <option value="14">ローバ</option>
+         <option value="15">ランパート</option>
+         <option value="16">ホライゾン</option>
+         <option value="17">ヒューズ</option>
+         <option value="18">ヴァルキリー</option>
+         <option value="19">シア</option>
+         <option value="20">アッシュ</option>
+         <option value="21">マッドマギー</option>
          </select>
 
      </fieldset>
 
-     <fieldset> 
-        <legend>パーティー構成</legend>
-        <select name="party1" id="party1">
-         <option value="指定しない">指定しない</option>
-         <option value="ブラッドハウンド">ブラッドハウンド</option>
-         <option value="ジブラルタル">ジブラルタル</option>
-         <option value="ライフライン">ライフライン</option>
-         <option value="パスファインダー">パスファインダー</option>
-         <option value="レイス">レイス</option>   
-         <option value="バンガロール">バンガロール</option>
-         <option value="コースティック">コースティック</option>
-         <option value="ミラージュ">ミラージュ</option>
-         <option value="オクタン">オクタン</option>
-         <option value="ワットソン">ワットソン</option>
-         <option value="クリプト">クリプト</option>
-         <option value="レヴナント">レヴナント</option>
-         <option value="ローバ">ローバ</option>
-         <option value="ランパート">ランパート</option>
-         <option value="ホライゾン">ホライゾン</option>
-         <option value="ヒューズ">ヒューズ</option>
-         <option value="ヴァルキリー">ヴァルキリー</option>
-         <option value="シア">シア</option>
-         <option value="アッシュ">アッシュ</option>
-         <option value="マッドマギー">マッドマギー</option>
-         </select>
-
-         <select name="party2" id="party2">
-            <option value="指定しない">指定しない</option>
-            <option value="ブラッドハウンド">ブラッドハウンド</option>
-            <option value="ジブラルタル">ジブラルタル</option>
-            <option value="ライフライン">ライフライン</option>
-            <option value="パスファインダー">パスファインダー</option>
-            <option value="レイス">レイス</option>   
-            <option value="バンガロール">バンガロール</option>
-            <option value="コースティック">コースティック</option>
-            <option value="ミラージュ">ミラージュ</option>
-            <option value="オクタン">オクタン</option>
-            <option value="ワットソン">ワットソン</option>
-            <option value="クリプト">クリプト</option>
-            <option value="レヴナント">レヴナント</option>
-            <option value="ローバ">ローバ</option>
-            <option value="ランパート">ランパート</option>
-            <option value="ホライゾン">ホライゾン</option>
-            <option value="ヒューズ">ヒューズ</option>
-            <option value="ヴァルキリー">ヴァルキリー</option>
-            <option value="シア">シア</option>
-            <option value="アッシュ">アッシュ</option>
-            <option value="マッドマギー">マッドマギー</option>
-            </select>
-
-            <select name="party3" id="party3">
-               <option value="指定しない">指定しない</option>
-               <option value="ブラッドハウンド">ブラッドハウンド</option>
-               <option value="ジブラルタル">ジブラルタル</option>
-               <option value="ライフライン">ライフライン</option>
-               <option value="パスファインダー">パスファインダー</option>
-               <option value="レイス">レイス</option>   
-               <option value="バンガロール">バンガロール</option>
-               <option value="コースティック">コースティック</option>
-               <option value="ミラージュ">ミラージュ</option>
-               <option value="オクタン">オクタン</option>
-               <option value="ワットソン">ワットソン</option>
-               <option value="クリプト">クリプト</option>
-               <option value="レヴナント">レヴナント</option>
-               <option value="ローバ">ローバ</option>
-               <option value="ランパート">ランパート</option>
-               <option value="ホライゾン">ホライゾン</option>
-               <option value="ヒューズ">ヒューズ</option>
-               <option value="ヴァルキリー">ヴァルキリー</option>
-               <option value="シア">シア</option>
-               <option value="アッシュ">アッシュ</option>
-               <option value="マッドマギー">マッドマギー</option>
-               </select>
-     </fieldset>
+     
 
      <fieldset>
         <legend>ボイスチャット</legend>
-         <input type="radio" name="vc" value="あり" id="あり"><label for="あり">あり</label><br>
-         <input type="radio" name="vc" value="なし" id="なし"><label for="なし">なし</label><br>
+         <input type="radio" name="voice" value="1" id="ボイスチャット"><label for="あり">あり</label><br>
+         <input type="radio" name="voice" value="2" id="ボイスチャット"><label for="なし">なし</label><br>
      </fieldset>
 
      <fieldset>
       <legend>追加コメント、所有バッジなど</legend>
-       <textarea name="text" type="text"></textarea>
+       <textarea name="comment" type="text"></textarea>
      </fieldset>
      <input type="submit" value="募集する" id="input" >
    </fieldset>

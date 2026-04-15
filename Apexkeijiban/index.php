@@ -11,15 +11,12 @@ $blogData = $dbc->getAllBlog();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>フレンド募集</title>
 </head>
 <body>
     <h2>募集一覧</h2>
     <p><a href="form.html">新規作成</a></p>
 
-<table>
 <table border="1">
  <tr>
  <th  style="width:100px;">No.</th>
@@ -38,16 +35,16 @@ $blogData = $dbc->getAllBlog();
  </tr>
  <?php foreach($blogData as $column): ?>
     <tr>
-    <td><?php echo $column['No.'] ?></td>
-        <td><?php echo $column['日付'] ?></td>
-        <td><?php echo $column['ネーム'] ?></td>
-        <td><?php echo $dbc->setselectName($column['ゲームモード']) ?></td>
-        <td><?php echo $dbc->setcrossplayName($column['クロスプレイ']) ?></td>
-        <td><?php echo $dbc->setmodelName($column['機種']) ?></td>
-        <td><?php echo $dbc->setrankName($column['ランク']) ?></td>
-        <td><?php echo $dbc->setparty0Name($column['myレジェンド']) ?></td>
-        <td><?php echo $dbc->setvcName($column['ボイスチャット']) ?></td>
-        <td><?php echo $column['コメント'] ?></td>
+    <td><?php echo htmlspecialchars($column['No'],ENT_QUOTES) ?></td>
+        <td><?php echo htmlspecialchars($column['time'],ENT_QUOTES) ?></td>
+        <td><?php echo htmlspecialchars($column['name'],ENT_QUOTES) ?></td>
+        <td><?php echo $dbc->setselectName($column['mode']) ?></td>
+        <td><?php echo $dbc->setcrossplayName($column['play']) ?></td>
+        <td><?php echo $dbc->setmodelName($column['model']) ?></td>
+        <td><?php echo $dbc->setrankName($column['rank']) ?></td>
+        <td><?php echo $dbc->setparty0Name($column['character']) ?></td>
+        <td><?php echo $dbc->setvcName($column['voice']) ?></td>
+        <td><?php echo htmlspecialchars($column['comment'],ENT_QUOTES) ?></td>
 
 
 
