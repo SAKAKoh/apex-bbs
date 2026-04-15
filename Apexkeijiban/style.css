@@ -1,0 +1,71 @@
+.header-logo{
+    font-size:25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkgray;
+    padding:20px 50px; 
+    background-color:darkred;
+    background-size:cover;
+    opacity:0.8;
+    margin:0 auto;
+}
+main{
+    height: 1200px
+}
+
+.game-mode{
+    float:left;
+    padding:15px 50px;
+}
+
+.sakusei{
+    width:200px;
+    float:right;
+}
+.sousin{
+    width:60px;
+}
+
+.btn{
+    border:1px solid gray;
+    display:inline-block;
+    padding:8px 24px;
+    color:red;
+    opacity:0.8;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px;
+
+}
+
+.text{
+    width:400px;
+    margin-top:10px;
+    margin-bottom:30px;
+    padding:20px;
+    font-size:18px;
+    border:1px solid #dee7ec;
+  }
+
+ 
+  .btn{
+    padding:8px 24px;
+    color:white;
+    display:inline-block;
+    opacity:0.8;
+    
+  }
+
+  .message {
+    padding: 15px 40px;
+    background-color: #5dca88;
+    cursor: pointer;
+    box-shadow: 0 7px #1a7940;
+  }
+  
+  .message:active{
+    position:relative;
+    top:7px;
+    box-shadow:none;
+  }
