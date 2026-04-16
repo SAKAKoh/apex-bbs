@@ -41,7 +41,13 @@ $dbh=new PDO('mysql:host=localhost;dbname=blog.php;charset=utf8',$user,$pass);
         echo '<td>' . htmlspecialchars($row['No'], ENT_QUOTES) . '</td>' . PHP_EOL;
         echo '<td>' . htmlspecialchars($row['time'], ENT_QUOTES) . '</td>' . PHP_EOL;
         echo '<td>' . htmlspecialchars($row['name'], ENT_QUOTES) . '</td>' . PHP_EOL;
-        echo '<td>' . htmlspecialchars($row['mode'], ENT_QUOTES) . '</td>' . PHP_EOL;
+        echo '<td>' . htmlspecialchars match ($row['mode'], ENT_QUOTES){
+                     '1'=>'訓練所',
+                     '2'=>'カジュアル',
+                     '3'=>'ランクマッチ',
+                     '4'=>'アリーナ',
+                     '5'=>'アリーナランク',
+        } . '</td>' . PHP_EOL;
         echo '<td>' . htmlspecialchars($row['play'], ENT_QUOTES) . '</td>' . PHP_EOL;
         echo '<td>' . htmlspecialchars($row['model'], ENT_QUOTES) . '</td>' . PHP_EOL;
         echo '<td>' . htmlspecialchars($row['rank'], ENT_QUOTES) . '</td>' . PHP_EOL;
