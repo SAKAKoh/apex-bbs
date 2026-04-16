@@ -30,7 +30,6 @@ $dbh=new PDO('mysql:host=localhost;dbname=blog.php;charset=utf8',$user,$pass);
     $stmt = $dbh->query($sql);
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    echo'募集を開始しました！<br>';
 
     echo '<table border="1">' . PHP_EOL;
     echo '<tr>' . PHP_EOL;
