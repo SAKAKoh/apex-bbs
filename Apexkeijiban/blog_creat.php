@@ -5,7 +5,7 @@ $pass = $env['DB_PASS'];
 
 try
 {
-$dbh=new PDO('mysql:host=localhost;dbname=blog.php;charset=utf8',$user,$pass);
+$dbh=new PDO('mysql:host=localhost;dbname=blog;charset=utf8',$user,$pass);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
  if($_SERVER['REQUEST_METHOD'] === 'POST'){
